@@ -146,13 +146,13 @@ const EndDate = moment.tz(req.body.post_meta._EventEndDate[0], 'YYYY-MM-DD HH:mm
 // This route gets all the tags and the municipalities from the database.
 app.get("/data", async (req, res) => {
   const interests = await DataCollection.findOne({
-    _id: new ObjectId("65e52fd998321b99c36da1dc"),
+    _id: new ObjectId("67bb35b9a79de4ddebb02571"),
   });
-  //console.log("interests: ", interests);
+  console.log("interests: ", interests);
   const municipalities = await DataCollection.findOne({
-    _id: new ObjectId("65e52fec98321b99c36da1dd"),
+    _id: new ObjectId("67bb35ada79de4ddebb0256f"),
   });
-  //console.log(" municipalities: ", municipalities);
+  console.log(" municipalities: ", municipalities);
 
   res.json({
     interests: interests.Interests,
